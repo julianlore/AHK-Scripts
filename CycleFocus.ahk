@@ -7,7 +7,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ; Function: CycleFocus
 ; Function to toggle focus between windows with a common title
 ; e.g. cycle between all windows with the word "Firefox"
-ChcleFocus(WinTitle){
+CycleFocus(WinTitle){
     SetTitleMatchMode,2 ; Don't require specifying the exact title, match part of the title
     WinGet, Windows, List, %WinTitle%
     ; Whether we should focus at next iteration, i.e. the current window is focused, so we cycle to the next one
